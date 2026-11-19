@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Assignments</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f5f9;
+            padding: 25px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #172554;
+            margin-bottom: 25px;
+            font-size: 32px;
+        }
+
+        .con {
+            min-height: 650px;
+            width: 100%;
+            display: flex;
+            gap: 20px;
+        }
+
+        .left {
+            width: 15%;
+            min-width: 220px;
+            background-color: white;
+            border: 1px solid #dbeafe;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 18px rgba(23, 37, 84, 0.08);
+        }
+
+        .left h2 {
+            color: #172554;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 21px;
+        }
+
+        .button {
+            width: 100%;
+            min-height: 42px;
+            background-color: #172554;
+            text-align: center;
+            border-radius: 8px;
+            margin-top: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #2563eb;
+            transform: translateX(5px);
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: bold;
+            width: 100%;
+            padding: 12px;
+        }
+
+        .right {
+            width: 80%;
+            min-height: 650px;
+            background-color: white;
+            border: 1px solid #dbeafe;
+            border-radius: 15px;
+            padding: 10px;
+            box-shadow: 0 5px 18px rgba(23, 37, 84, 0.08);
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 625px;
+            border: none;
+            border-radius: 10px;
+            background-color: white;
+        }
+
+        @media (max-width: 700px) {
+            body {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            .con {
+                flex-direction: column;
+            }
+
+            .left, .right {
+                width: 100%;
+            }
+
+            .right {
+                min-height: 500px;
+            }
+
+            iframe {
+                min-height: 480px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>My Assignments</h1>
+
+    <div class="con">
+
+        <div class="left">
+
+            <h2>Explore Assignments</h2>
+
+            <div class="button">
+                <a href="assignment_1.html" target="box">Assignment 1</a>
+            </div>
+
+            <div class="button">
+                <a href="assignment_2.html" target="box">Assignment 2</a>
+            </div>
+
+            <div class="button">
+                <a href="assignment_3.html" target="box">Assignment 3</a>
+            </div>
+
+            <div class="button">
+                <a href="assignment_4/assignment_4.html" target="box">Assignment 4</a>
+            </div>
+
+            <div class="button">
+                <a href="assignment_5.html" target="box">Assignment 5</a>
+            </div>
+
+            <div class="button">
+                <a href="assignment_6/index.html" target="box">Assignment 6</a>
+            </div>
+
+            <div class="button">
+                <a href="assignment_7.html" target="box">Assignment 7</a>
+            </div>
+
+            <div class="button">
+                <a href="assignment_8.html" target="box">Assignment 8</a>
+            </div>
+
+            <div class="button">
+                <a href="assignment_9.html" target="box">Assignment 9</a>
+            </div>
+
+            <div class="button">
+                <a href="assignment_10/index.html" target="box">Assignment 10</a>
+            </div>
+            
+            <div class="button">
+                <a  href="assignment_11.html" target="box">Assignment 11</a>
+            </div>
+        </div>
+
+        <div class="right">
+            <iframe src="" name="box"></iframe>
+        </div>
+
+    </div>
+
+</body>
+</html>
