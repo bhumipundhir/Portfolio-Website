@@ -1,8 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap");
-
-/* ============ TOKENS ============
-   Palette borrowed from Jaipur blue pottery and marigold garlands.
-   Motif: the jharokha arch (rounded-top window) used for photos and icons. */
 :root {
     --paper: #F4F7FF;
     --white: #FFFFFF;
@@ -14,7 +10,6 @@
     --display: 'Bricolage Grotesque', system-ui, sans-serif;
     --body: 'Figtree', system-ui, sans-serif;
     --ease: cubic-bezier(.2, .8, .2, 1);
-    /* the reference "wrap": content is centred and capped at 1120px */
     --side: max(24px, calc((100% - 1120px) / 2));
     --section-y: clamp(64px, 9vw, 112px);
 }
@@ -30,7 +25,6 @@ html {
 }
 section {
     scroll-margin-top: 80px;
-    /* set this to your header's height */
 }
 
 
@@ -61,11 +55,9 @@ a {
     outline-color: var(--marigold);
 }
 
-/* ============ HEADER ============ */
 header {
     position: sticky;
     top: 0;
-    z-index: 50;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -126,7 +118,6 @@ header {
     color: var(--cobalt);
 }
 
-/* last nav item (Contact) is the filled pill */
 .nav li:last-child a {
     background: var(--cobalt);
     color: #fff;
@@ -137,7 +128,6 @@ header {
     color: #fff;
 }
 
-/* ============ HERO ============ */
 .hero {
     position: relative;
     overflow: hidden;
@@ -165,7 +155,6 @@ header {
     min-width: 0;
 }
 
-/* college pill */
 .address {
     display: inline-flex;
     align-items: center;
@@ -193,7 +182,6 @@ header {
     animation: fadeUp 1s var(--ease) .25s backwards;
 }
 
-/* !important only because the HTML has an inline colour on this tag */
 .hero-left>h2 {
     font-family: var(--display);
     font-weight: 700;
@@ -230,7 +218,6 @@ header {
     transition: transform .25s var(--ease), background .25s, color .25s, box-shadow .25s;
 }
 
-/* !important only because the HTML has an inline colour on these buttons */
 .button button:first-child {
     background: var(--ink);
     color: #fff !important;
@@ -280,20 +267,18 @@ header {
     color: #fff;
     transform: translateY(-5px) rotate(-8deg);
 }
-/* Hover colours for individual hero icons */
 .icon i.fa-whatsapp:hover {
-    background: #25D366;   /* WhatsApp green */
+    background: #25D366;   
 }
 
 .icon i.fa-github:hover {
-    background: #111111;   /* GitHub black */
+    background: #111111;   
 }
 
 .icon i.fa-envelope:hover {
-    background: #FF8A8A;   /* light red */
+    background: #FF8A8A;   
 }
 
-/* Arch photo */
 .hero-right {
     position: relative;
     width: 100%;
@@ -348,7 +333,6 @@ header {
     transform: scale(1.07);
 }
 
-/* floating HTML5 / CSS3 chips (drawn with pseudo-elements, no extra HTML) */
 .hero-right::before,
 .hero-right::after {
     position: absolute;
@@ -378,7 +362,6 @@ header {
     background: radial-gradient(circle at 20px 50%, var(--cobalt) 0 7px, transparent 8px), var(--white);
 }
 
-/* ============ TICKER (marquee) ============ */
 .marquee {
     background: var(--ink);
     color: #fff;
@@ -418,7 +401,6 @@ header {
     margin-left: 28px;
 }
 
-/* ============ ABOUT ============ */
 .about {
     padding-bottom: var(--section-y);
 }
@@ -563,7 +545,6 @@ header {
     font-weight: 500;
 }
 
-/* ============ SKILLS ============ */
 .skills {
     position: relative;
     overflow: hidden;
@@ -672,7 +653,6 @@ header {
     color: #fff;
 }
 
-/* ============ ASSIGNMENTS ============ */
 .Assignment {
     padding: var(--section-y) var(--side);
 }
@@ -734,7 +714,6 @@ header {
     --c: var(--ink);
 }
 
-/* arch-shaped icon badge (Font Awesome glyph drawn with ::after, no extra HTML) */
 .assignment-top::after {
     content: "\f1c9";
     position: absolute;
@@ -828,7 +807,6 @@ a{
     text-decoration: none;
 }
 
-/* ============ CONTACT ============ */
 .contact {
     padding: 0 var(--side) var(--section-y);
 }
@@ -887,7 +865,6 @@ a{
     margin-top: 28px;
 }
 
-/* icon on the left, label above value on the right */
 .info {
     display: grid;
     grid-template-columns: 48px 1fr;
@@ -1034,26 +1011,12 @@ form textarea:user-invalid {
     }
 }
 
-/* @keyframes grow {
-    from {
-        transform: scaleX(0);
-    }
-}
-
-@keyframes draw {
-    from {
-        transform: scaleY(0);
-    }
-} */
-
 @keyframes expand {
     to {
         transform: scale(1.12) translateX(-2%);
     }
 }
 
-/* Skill bars and the learning-path line fill as they scroll into view
-   (CSS scroll-driven animation; browsers without it play them once on load). */
 @supports (animation-timeline: view()) {
     .progress-bar {
         animation: grow linear both;
@@ -1065,63 +1028,5 @@ form textarea:user-invalid {
         animation: draw linear both;
         animation-timeline: view();
         animation-range: entry 20% cover 60%;
-    }
-}
-
-/* ============ RESPONSIVE ============ */
-@media (max-width: 860px) {
-
-    .hero,
-    .box,
-    .contact-info {
-        grid-template-columns: 1fr;
-        gap: 48px;
-    }
-
-    .box-left {
-        position: static;
-    }
-
-    .hero-right {
-        max-width: 320px;
-    }
-
-    .hero-right::before {
-        left: -4%;
-    }
-
-    .hero-right::after {
-        right: -4%;
-    }
-}
-
-@media (max-width: 560px) {
-    header {
-        padding: 8px 14px;
-    }
-
-    .logo h1 {
-        display: none;
-    }
-
-    .nav a {
-        padding: 8px 10px;
-        font-size: .88rem;
-    }
-
-    .cards,
-    .assignment-card {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-
-    *,
-    *::before,
-    *::after {
-        animation: none !important;
-        transition: none !important;
-        scroll-behavior: auto !important;
     }
 }
