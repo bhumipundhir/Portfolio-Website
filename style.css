@@ -1030,3 +1030,77 @@ form textarea:user-invalid {
         animation-range: entry 20% cover 60%;
     }
 }
+
+    footer {
+        background-color: #101d4d;
+        color: white;
+        text-align: center;
+        padding: 35px;
+        border-top: 3px solid #3457e8;
+    }
+
+    footer h2 {
+        font-size: 22px;
+    }
+
+    footer p {
+        font-size: 16px;
+    }
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 860px) {
+
+    .hero,
+    .box,
+    .contact-info {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .box-left {
+        position: static;
+    }
+
+    .hero-right {
+        max-width: 320px;
+    }
+
+    .hero-right::before {
+        left: -4%;
+    }
+
+    .hero-right::after {
+        right: -4%;
+    }
+}
+
+@media (max-width: 560px) {
+    header {
+        padding: 8px 14px;
+    }
+
+    .logo h1 {
+        display: none;
+    }
+
+    .nav a {
+        padding: 8px 10px;
+        font-size: .88rem;
+    }
+
+    .cards,
+    .assignment-card {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
